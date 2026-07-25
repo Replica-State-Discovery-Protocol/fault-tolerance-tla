@@ -1,0 +1,297 @@
+cp models/shadow_off.cfg spec/rsdp.cfg
+cd spec && java -XX:+UseParallelGC -Xmx4g -cp ../tla2tools.jar tlc2.TLC -workers auto -config rsdp.cfg rsdp.tla
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 43 and seed -8339039810952679453 with 16 workers on 16 cores with 3641MB heap and 64MB offheap memory [pid: 42231] (Linux 7.0.0-28-generic amd64, Ubuntu 21.0.11 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/constantine/Programming/Constantine/Projects/RSDP/fault-tolerance-tla/spec/rsdp.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module rsdp
+Starting... (2026-07-25 18:01:07)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-07-25 18:01:07.
+Error: Invariant ShadowFree is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) @@
+  n2 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 0
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ lastHb = (n1 :> 0 @@ n2 :> 0 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 2: <Tick line 192, col 5 to line 196, col 61 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) @@
+  n2 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 1
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ lastHb = (n1 :> 0 @@ n2 :> 0 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 3: <Tick line 192, col 5 to line 196, col 61 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) @@
+  n2 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ lastHb = (n1 :> 0 @@ n2 :> 0 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 4: <Heartbeat line 98, col 5 to line 109, col 50 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :>
+      ( n1 :> <<>> @@
+        n2 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> @@
+        n3 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> ) @@
+  n2 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ lastHb = (n1 :> 2 @@ n2 :> 0 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 5: <Heartbeat line 98, col 5 to line 109, col 50 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :>
+      ( n1 :> <<>> @@
+        n2 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> @@
+        n3 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> ) @@
+  n2 :>
+      ( n1 :> <<[inc |-> 1, v |-> 2, from |-> n2, sentAt |-> 2]>> @@
+        n2 :> <<>> @@
+        n3 :> <<[inc |-> 1, v |-> 2, from |-> n2, sentAt |-> 2]>> ) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 2 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ lastHb = (n1 :> 2 @@ n2 :> 2 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 6: <Deliver line 122, col 5 to line 137, col 46 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :>
+      ( n1 :> <<>> @@
+        n2 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> @@
+        n3 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> ) @@
+  n2 :>
+      ( n1 :> <<>> @@
+        n2 :> <<>> @@
+        n3 :> <<[inc |-> 1, v |-> 2, from |-> n2, sentAt |-> 2]>> ) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 2 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ lastHb = (n1 :> 2 @@ n2 :> 2 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 1, v |-> 2, tau |-> 2] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 7: <Crash line 162, col 5 to line 166, col 62 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> FALSE @@ n3 :> TRUE)
+/\ q = ( n1 :>
+      ( n1 :> <<>> @@
+        n2 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> @@
+        n3 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> ) @@
+  n2 :>
+      ( n1 :> <<>> @@
+        n2 :> <<>> @@
+        n3 :> <<[inc |-> 1, v |-> 2, from |-> n2, sentAt |-> 2]>> ) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 2 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ lastHb = (n1 :> 2 @@ n2 :> 2 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 1, v |-> 2, tau |-> 2] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 8: <Recover line 169, col 5 to line 178, col 39 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :>
+      ( n1 :> <<>> @@
+        n2 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> @@
+        n3 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> ) @@
+  n2 :>
+      ( n1 :> <<>> @@
+        n2 :> <<>> @@
+        n3 :> <<[inc |-> 1, v |-> 2, from |-> n2, sentAt |-> 2]>> ) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 2 @@ n3 :> 1)
+/\ lastHb = (n1 :> 2 @@ n2 :> 0 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 1, v |-> 2, tau |-> 2] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 9: <Heartbeat line 98, col 5 to line 109, col 50 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :>
+      ( n1 :> <<>> @@
+        n2 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> @@
+        n3 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> ) @@
+  n2 :>
+      ( n1 :> <<[inc |-> 2, v |-> 1, from |-> n2, sentAt |-> 2]>> @@
+        n2 :> <<>> @@
+        n3 :>
+            << [inc |-> 1, v |-> 2, from |-> n2, sentAt |-> 2],
+               [inc |-> 2, v |-> 1, from |-> n2, sentAt |-> 2] >> ) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 0
+/\ ver = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 2 @@ n3 :> 1)
+/\ lastHb = (n1 :> 2 @@ n2 :> 2 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 1, v |-> 2, tau |-> 2] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+State 10: <Deliver line 122, col 5 to line 137, col 46 of module rsdp>
+/\ op = (n1 :> TRUE @@ n2 :> TRUE @@ n3 :> TRUE)
+/\ q = ( n1 :>
+      ( n1 :> <<>> @@
+        n2 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> @@
+        n3 :> <<[inc |-> 1, v |-> 1, from |-> n1, sentAt |-> 2]>> ) @@
+  n2 :>
+      ( n1 :> <<>> @@
+        n2 :> <<>> @@
+        n3 :>
+            << [inc |-> 1, v |-> 2, from |-> n2, sentAt |-> 2],
+               [inc |-> 2, v |-> 1, from |-> n2, sentAt |-> 2] >> ) @@
+  n3 :> (n1 :> <<>> @@ n2 :> <<>> @@ n3 :> <<>>) )
+/\ now = 2
+/\ rejections = 1
+/\ ver = (n1 :> 1 @@ n2 :> 1 @@ n3 :> 1)
+/\ inc = (n1 :> 1 @@ n2 :> 2 @@ n3 :> 1)
+/\ lastHb = (n1 :> 2 @@ n2 :> 2 @@ n3 :> 0)
+/\ mem = ( n1 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 1, v |-> 2, tau |-> 2] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n2 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) @@
+  n3 :>
+      ( n1 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n2 :> [inc |-> 0, v |-> 0, tau |-> 0] @@
+        n3 :> [inc |-> 0, v |-> 0, tau |-> 0] ) )
+
+16303 states generated, 8177 distinct states found, 4951 states left on queue.
+The depth of the complete state graph search is 12.
+The average outdegree of the complete state graph is 3 (minimum is 0, the maximum 8 and the 95th percentile is 6).
+Finished in 00s at (2026-07-25 18:01:07)
+make: *** [Makefile:14: shadow_off] Error 12

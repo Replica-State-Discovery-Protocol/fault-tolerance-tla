@@ -1,0 +1,25 @@
+# --- TLC working artifacts ---
+states/
+metadir/
+*.st
+*.fp
+nodes_*
+ptrs_*
+*.out
+*_trace_*.tlc
+*.dump
+.toolbox/
+# TLC config copied next to the module by make targets
+spec/rsdp.cfg
+# fetched tool
+tla2tools.jar
+
+# --- editor / OS noise ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- exceptions: the curated counterexample ---
+!traces/*.txt
+!traces/*.tlc
