@@ -1,0 +1,34 @@
+nohup: ignoring input
+cp models/shadow_recovery_n3.cfg spec/rsdp.cfg
+cd spec && java -XX:+UseParallelGC -Xmx16g -cp ../tla2tools.jar tlc2.TLC -workers auto -lncheck final -config rsdp.cfg rsdp.tla
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 84 and seed -6778204465783447914 with 16 workers on 16 cores with 14564MB heap and 64MB offheap memory [pid: 133033] (Linux 7.0.0-28-generic amd64, Ubuntu 21.0.11 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/constantine/Programming/Constantine/Projects/RSDP/fault-tolerance-tla/spec/rsdp.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/FiniteSets.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module rsdp
+Starting... (2026-07-26 12:00:17)
+Implied-temporal checking--satisfiability problem has 1 branches.
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-07-26 12:00:17.
+Progress(16) at 2026-07-26 12:00:20: 358,481 states generated (358,481 s/min), 154,233 distinct states found (154,233 ds/min), 56,829 states left on queue.
+Progress(33) at 2026-07-26 12:01:20: 7,677,342 states generated (7,318,861 s/min), 2,365,799 distinct states found (2,211,566 ds/min), 147,572 states left on queue.
+Progress(56) at 2026-07-26 12:01:49: 11,208,447 states generated, 3,286,066 distinct states found, 0 states left on queue.
+Checking temporal properties for the complete state space with 3286066 total distinct states at (2026-07-26 12:01:49)
+Finished checking temporal properties in 01min 07s at 2026-07-26 12:02:56
+Model checking completed. No error has been found.
+  Estimates of the probability that TLC did not check all reachable states
+  because two distinct states had the same fingerprint:
+  calculated (optimistic):  val = 1.4E-6
+  based on the actual fingerprints:  val = 9.4E-8
+11208447 states generated, 3286066 distinct states found, 0 states left on queue.
+The depth of the complete state graph search is 56.
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 8 and the 95th percentile is 3).
+Finished in 02min 40s at (2026-07-26 12:02:57)
+rm -f spec/rsdp.cfg
