@@ -8,5 +8,5 @@ c="$1"; shift || true
 mod=SplitBrain; case "$c" in lemma1_*) mod=LemmaOne;; esac
 cp "models/$c.cfg" "spec/$mod.cfg"
 ( cd spec && java -XX:+UseParallelGC ${JAVA_OPTS:--Xmx8g} -cp "$(cd .. && pwd)/$JAR" tlc2.TLC \
-    -workers auto -deadlock -noGenerateSpecTE "$@" -config "$mod.cfg" "$mod.tla" )
+    -workers auto -deadlock "$@" -config "$mod.cfg" "$mod.tla" )
 rm -f "spec/$mod.cfg"; rm -rf spec/states
