@@ -1,7 +1,8 @@
-# Finding: the version shadow (crash-fault-tolerance article)
+# Finding: the version shadow
 
-Summary of the defect found while writing the crash-fault-tolerance
-article; details and logs are in [`../cft/README.md`](../cft/README.md).
+A defect in RSDP's original version gate, found by model checking while
+writing the CFT article. The configurations involved are described in
+[`results.md`](results.md); paths below are relative to the `cft/` folder.
 
 ## The defect
 
@@ -15,9 +16,9 @@ the stored version it is never readmitted (Theorem 2 of the article).
 
 ## How it was found
 
-Configuration `cft/models/shadow_off.cfg` (original gate, crash-recovery)
+Configuration `models/shadow_off.cfg` (original gate, crash-recovery)
 violates `ShadowFree` in a 10-state trace
-(`cft/traces/shadow_off.trace.txt`): n2 heartbeats at v = 2 and is stored;
+(`traces/shadow_off.trace.txt`): n2 heartbeats at v = 2 and is stored;
 `Crash(n2)`; `Recover(n2)` bumps the incarnation and resets the version;
 the recovered node's v = 1 SHARE hits gate row 1 and is discarded.
 
@@ -33,5 +34,6 @@ carries (ι_new, 1) > (ι_old, v_pre) and is admitted immediately.
 `ShadowFree` over 3,286,066 distinct states; `shadow_recovery_n3` adds the
 liveness properties and also holds.
 
-The split-brain work builds on this fix: partition detection
-(heal vs restart) and the quarantine of Lemma 3 both rely on incarnations.
+The split-brain model builds on this fix: telling a healed partition from
+a restart, and the quarantine of a restarted voter, both rely on
+incarnations (see [`../../split-brain/docs/model.md`](../../split-brain/docs/model.md)).

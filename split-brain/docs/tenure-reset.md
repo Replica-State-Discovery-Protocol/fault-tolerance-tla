@@ -1,9 +1,10 @@
 # Finding: tenure must reset when a peer stops being fresh
 
-Mechanized discovery made while building the split-brain spec
-(`split-brain/spec/SplitBrain.tla`). It is the split-brain counterpart of
-the version-shadow finding in the crash-fault-tolerance article
-(see [`cft-version-shadow.md`](cft-version-shadow.md)).
+A defect in the draft of the split-brain mechanism, found by model
+checking `spec/SplitBrain.tla`. It is the split-brain counterpart of the
+version shadow found for the CFT article
+([`../../cft/docs/version-shadow.md`](../../cft/docs/version-shadow.md)).
+Paths below are relative to the `split-brain/` folder.
 
 ## Background
 
@@ -34,7 +35,7 @@ to be evicted (age < Θ) kept its full tenure.
 The spec makes the reset rule a constant, `TENURE ∈ {"evict", "fresh"}`.
 Configuration `sb_tenure_evict` (partition {1} | {2,3}, then heal, draft
 rule) violates `NoDualLeader` in 4,400 distinct states with an 8-state
-trace (`split-brain/traces/sb_tenure_evict.trace.txt`).
+trace (`traces/sb_tenure_evict.trace.txt`).
 
 Parameters: Θ = 5, Θ_r = 2, Q = 4, K = 2 (one consecutive loss allowed),
 Δ = 1. `age[i][j]` is ticks since i last heard j (5 = evicted); `ten[i][j]`
@@ -90,23 +91,11 @@ being fresh (the lower bound on Θ_r), so their tenure never resets.
 | `sb_merge_n3` | fixed | same, members claims tracked | ✓ `MergeOnHeal`, `AuthReturns` hold |
 | `sb_quar_on` | fixed | node 3 crashes and restarts across the cut | ✓ holds |
 
-`diff split-brain/models/sb_tenure_evict.cfg split-brain/models/sb_tenure_fresh.cfg`
+`diff models/sb_tenure_evict.cfg models/sb_tenure_fresh.cfg`
 shows the constant and the added invariants as the only differences. All
 other split-brain configurations use the fixed rule.
 
-## Impact on the article
-
-1. **Definition 6 (tenure)**: replace "the local time at which the slot was
-   created for v_j's current incarnation" by the continuously-fresh
-   definition above.
-2. **Remark after Lemma 3**: drop the eviction-versus-restart discussion;
-   state the fixed rule and that it also covers silence.
-3. **Theorem 2, handover paragraph**: it relied on the rejoining node's
-   slots being recreated after eviction. With the fixed rule the argument
-   holds whether or not eviction happened.
-4. **Section 6 (mechanized complement)**: report `sb_tenure_evict` /
-   `sb_tenure_fresh` as a pair, in the same way the crash article reports
-   `shadow_off` / `shadow_on`.
+## Effect on the bounds
 
 Lemma 3's bound is unchanged: the fixed rule resets tenure at least as
 often as the draft rule, so it is at least as conservative.
