@@ -1,0 +1,210 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 108 and seed -8002879717864168795 with 1 worker on 16 cores with 10923MB heap and 64MB offheap memory [pid: 22943] (Linux 7.0.0-34-generic amd64, Ubuntu 21.0.12.1 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/constantine/Programming/Constantine/Projects/RSDP/fault-tolerance-tla/split-brain/spec/SplitBrain.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/TLC.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module SplitBrain
+Starting... (2026-10-04 12:35:04)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-10-04 12:35:04.
+Error: Invariant NoDualLeader is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ phase = "pre"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {}
+/\ age = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+
+State 2: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "pre"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {}
+/\ age = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+
+State 3: <Partition line 234, col 5 to line 239, col 84 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 0
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+
+State 4: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 2, 2>>, <<2, 0, 0>>, <<2, 0, 0>>>>
+
+State 5: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 1>>, <<0, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 3, 3>>, <<3, 0, 1>>, <<3, 1, 0>>>>
+
+State 6: <Crash line 255, col 5 to line 261, col 78 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, FALSE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 0>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 1>>, <<0, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 3, 3>>, <<3, 0, 1>>, <<3, 1, 0>>>>
+
+State 7: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, FALSE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 4, 4>>, <<4, 0, 0>>, <<3, 1, 0>>>>
+
+State 8: <Restart line 265, col 5 to line 279, col 43 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, TRUE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<0, 0, 0>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 2>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 0>>
+/\ sideA = {1, 3}
+/\ age = <<<<0, 4, 4>>, <<4, 0, 0>>, <<5, 5, 0>>>>
+
+State 9: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, TRUE>>
+/\ linc = <<<<1, 1, 2>>, <<1, 1, 1>>, <<0, 0, 0>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 2>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<1, 0, 0>>>>
+/\ cfg = <<1, 1, 0>>
+/\ sideA = {1, 3}
+/\ age = <<<<0, 5, 0>>, <<5, 0, 1>>, <<5, 5, 0>>>>
+
+13236 states generated, 5605 distinct states found, 2008 states left on queue.
+The depth of the complete state graph search is 9.
+The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 31 and the 95th percentile is 5).
+Finished in 02s at (2026-10-04 12:35:06)

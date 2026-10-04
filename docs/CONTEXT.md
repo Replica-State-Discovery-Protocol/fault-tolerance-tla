@@ -154,7 +154,11 @@ K + Q. Chosen: Θ = 5, Θ_r = 2, Q = 4, K = 2, Δ = 1, T_rebase = 6.
 
 ### 4.3 Results — see `split-brain/README.md`
 
-That table is authoritative and records which runs are still pending.
+That table is authoritative. All rows have been run (2026-10-04, TLC 2.19,
+16-core machine) and every row behaves as expected: each mutation and
+witness is violated, each full-design row holds, including `sb_full_n3`
+(1,045,001,965 distinct states, exhaustive up to TLC's fingerprint-collision
+estimate of 0.018–0.33; see the note under the table).
 
 ## 5. The tenure finding (summary)
 
@@ -169,17 +173,17 @@ paragraph) still states the old rule and must be updated.**
 
 ## 6. Open tasks, in order
 
-1. **Before pushing the restructure**, tag the current remote `main` as
-   `crash-ft-v1` (and ideally make a Zenodo release): the CFT article's
-   reference points at the old root-level paths. At camera-ready, cite the
-   tag or DOI.
-2. Run every configuration on the 16-core machine (`make -C split-brain all`)
-   and fill the pending rows of `split-brain/README.md`. `sb_full_n3` is the
-   heavy one; give it the full heap. If an n = 4 row is too slow, set K = 1
-   for it in `tools/gen_models.py` and say so in the table (the n = 4
-   counterexamples do not depend on loss).
-3. If any `*_on` / `sb_full_n3` / `sb_tie` row fails, or any `*_off` /
-   witness row passes, stop and analyse before writing Section 6.
+1. Tag `crash-ft-v1` on the pre-restructure `main` (`f5c6eaf`): done; push
+   it before the restructure. A Zenodo release of the tag is still open. The
+   CFT article's reference points at the old root-level paths; at
+   camera-ready, cite the tag or DOI.
+2. ~~Run every configuration and fill the results table.~~ Done; see §4.3.
+   Practical notes for reruns: the small rows take about 2.5 min in total
+   with one worker. `sb_full_n3` takes about 4 h on 16 cores, needs about
+   170 GB of free disk for TLC's state queue (queue files are deleted only
+   at checkpoints; `-checkpoint 10` keeps the peak lower), and should be started detached from any session with a
+   time limit; `-recover` must be given the original run's `-fp` value.
+3. ~~If any row deviates, stop and analyse.~~ No row deviated.
 4. Update the article's tenure text (§5 above).
 5. Write Section 6 (≈ 1 page): model and abstractions; properties mapped to
    lemmas and theorems (bounded-response form of Theorem 2, witness

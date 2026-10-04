@@ -1,0 +1,19 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 53 and seed 1039567700676524617 with 1 worker on 16 cores with 10923MB heap and 64MB offheap memory [pid: 22371] (Linux 7.0.0-34-generic amd64, Ubuntu 21.0.12.1 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /home/constantine/Programming/Constantine/Projects/RSDP/fault-tolerance-tla/split-brain/spec/LemmaOne.tla
+Parsing file /tmp/Naturals.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/TLC.tla
+Parsing file /tmp/Sequences.tla
+Semantic processing of module Naturals
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module TLC
+Semantic processing of module LemmaOne
+Starting... (2026-10-04 12:34:34)
+<<"cases enumerated", 1089>>
+Computing initial states...
+Error: Invariant NoViolation is violated by the initial state:
+ce = [w |-> <<1, 2>>, X |-> {1}, m |-> 1, Y |-> {2}]
+
+Finished in 03s at (2026-10-04 12:34:37)
