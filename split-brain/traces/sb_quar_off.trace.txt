@@ -1,0 +1,192 @@
+Error: Invariant NoDualLeader is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ phase = "pre"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {}
+/\ age = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+
+State 2: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "pre"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {}
+/\ age = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+
+State 3: <Partition line 234, col 5 to line 239, col 84 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 0
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 1, 1>>, <<1, 0, 1>>, <<1, 1, 0>>>>
+
+State 4: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 2, 2>>, <<2, 0, 0>>, <<2, 0, 0>>>>
+
+State 5: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = FALSE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 1>>, <<0, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 3, 3>>, <<3, 0, 1>>, <<3, 1, 0>>>>
+
+State 6: <Crash(3) line 255, col 5 to line 261, col 78 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, FALSE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 0>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 1>>, <<0, 1, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 3, 3>>, <<3, 0, 1>>, <<3, 1, 0>>>>
+
+State 7: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, FALSE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<1, 1, 1>>>>
+/\ alive = <<TRUE, TRUE, FALSE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 1>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 1>>
+/\ sideA = {1}
+/\ age = <<<<0, 4, 4>>, <<4, 0, 0>>, <<3, 1, 0>>>>
+
+State 8: <Restart(3) line 265, col 5 to line 279, col 43 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, TRUE>>
+/\ linc = <<<<1, 1, 1>>, <<1, 1, 1>>, <<0, 0, 0>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 2>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ cfg = <<1, 1, 0>>
+/\ sideA = {1, 3}
+/\ age = <<<<0, 4, 4>>, <<4, 0, 0>>, <<5, 5, 0>>>>
+
+State 9: <Tick line 199, col 3 to line 231, col 82 of module SplitBrain>
+/\ phase = "part"
+/\ cutAge = 1
+/\ selfTen = <<0, 0, 0>>
+/\ moved = <<FALSE, FALSE, TRUE>>
+/\ linc = <<<<1, 1, 2>>, <<1, 1, 1>>, <<0, 0, 0>>>>
+/\ alive = <<TRUE, TRUE, TRUE>>
+/\ anyCrash = TRUE
+/\ sinceInject = 6
+/\ pc = 1
+/\ sinceHeal = 0
+/\ injectedInPart = FALSE
+/\ claims = <<{}, {}, {}>>
+/\ ten = <<<<0, 0, 0>>, <<0, 0, 0>>, <<0, 0, 0>>>>
+/\ deadAge = <<1, 1, 1>>
+/\ inc = <<1, 1, 2>>
+/\ loss = <<<<0, 0, 0>>, <<0, 0, 0>>, <<1, 0, 0>>>>
+/\ cfg = <<1, 1, 0>>
+/\ sideA = {1, 3}
+/\ age = <<<<0, 5, 0>>, <<5, 0, 1>>, <<5, 5, 0>>>>
+
+13236 states generated, 5605 distinct states found, 2008 states left on queue.

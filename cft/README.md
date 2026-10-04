@@ -1,5 +1,9 @@
 # RSDP Crash Fault Tolerance — TLA⁺ Specification
 
+> Moved from the repository root into `cft/` unchanged; the CFT article's
+> reference resolves to tag `crash-ft-v1`. Run from this folder
+> (`make safety_n3`). Overview: [`../README.md`](../README.md).
+
 Companion artifact for *Crash Fault Tolerance in the Replica State Discovery
 Protocol*. A single module, `spec/rsdp.tla`, models the
 memory/eviction core of the reference implementation

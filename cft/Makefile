@@ -1,4 +1,4 @@
-TLA2TOOLS = tla2tools.jar
+TLA2TOOLS = ../tla2tools.jar
 JAVA_OPTS = -XX:+UseParallelGC -Xmx12g
 CONFIGS   = safety_n3 safety_n4-a1 safety_n4-a2 safety_n5 detect_n3 shadow_off shadow_on shadow_recovery_n3
 TLC_FLAGS =

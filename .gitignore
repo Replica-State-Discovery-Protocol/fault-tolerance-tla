@@ -1,0 +1,28 @@
+# --- TLC working artifacts ---
+states/
+metadir/
+*.st
+*.fp
+nodes_*
+ptrs_*
+*.out
+*_trace_*.tlc
+*_TTrace_*
+*.dump
+.toolbox/
+# TLC configs copied next to the module by make targets / run.sh
+cft/spec/rsdp.cfg
+split-brain/spec/SplitBrain.cfg
+split-brain/spec/LemmaOne.cfg
+# fetched tool
+tla2tools.jar
+
+# --- editor / OS noise ---
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# --- exceptions: curated counterexamples ---
+!*/traces/*.txt
+!*/traces/*.tlc
